@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ini Peta Interaktif</title>
+	<title>Tennis Hub</title>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
 		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 	<style>
@@ -55,7 +55,7 @@
 					});
 				},
 			});
-			$.getJSON("https://script.google.com/macros/s/AKfycbw47WEiEFw-Qb9j7kej1JiQ4_QEEAPQJYRUfXLFFAIqyXWZ-2JS9_cUvnuKoTzS6jzFbA/exec", function (data) {
+			$.getJSON("https://script.google.com/macros/s/AKfycbxhfBijaNQtEdNoFGHX0GdBt9CmVUkdYntUoP2_UjM3fs0fDSWYorSf9OVk8cC3hZQ-2A/exec", function (data) {
 				point.addData(data);
 				map.addLayer(point);
 				map.fitBounds(point.getBounds());
@@ -65,4 +65,5 @@
 		loadlayer();
 	</script>
 </body>
+
 </html>
