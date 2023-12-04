@@ -48,15 +48,15 @@
 				onEachFeature: function (feature, layer) {
 					var popupContent = "<h4>" + feature.properties.nama + "</h4>" +
 						"<p>" + feature.properties.rating + "</p>" +
-						"<p>" + feature.properties.jam_tutup + "</p>" +
-						layer.on({
-							click: function (e) {
-								point.bindPopup(popupContent);
-							},
-						});
+						"<p>" + feature.properties.jam_tutup + "</p>";
+					layer.on({
+						click: function (e) {
+							point.bindPopup(popupContent);
+						},
+					});
 				},
 			});
-			$.getJSON("https://script.google.com/macros/s/AKfycbxhfBijaNQtEdNoFGHX0GdBt9CmVUkdYntUoP2_UjM3fs0fDSWYorSf9OVk8cC3hZQ-2A/exec", function (data) {
+			$.getJSON("https://script.google.com/macros/s/AKfycbwWt30QgzxLRGHRbZM-w0GnUdRp2tUz9ksaG3vLPKeyCNpalcudgEHw8favxbQ8Hh-VKQ/exec", function (data) {
 				point.addData(data);
 				map.addLayer(point);
 				map.fitBounds(point.getBounds());
