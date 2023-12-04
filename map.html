@@ -47,12 +47,13 @@
 			var point = L.geoJson(null, {
 				onEachFeature: function (feature, layer) {
 					var popupContent = "<h4>" + feature.properties.nama + "</h4>" +
-						"<p>" + feature.properties.deskripsi + "</p>";
-					layer.on({
-						click: function (e) {
-							point.bindPopup(popupContent);
-						},
-					});
+						"<p>" + feature.properties.rating + "</p>" +
+						"<p>" + feature.properties.jam_tutup + "</p>" +
+						layer.on({
+							click: function (e) {
+								point.bindPopup(popupContent);
+							},
+						});
 				},
 			});
 			$.getJSON("https://script.google.com/macros/s/AKfycbxhfBijaNQtEdNoFGHX0GdBt9CmVUkdYntUoP2_UjM3fs0fDSWYorSf9OVk8cC3hZQ-2A/exec", function (data) {
